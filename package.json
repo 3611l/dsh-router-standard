@@ -18,6 +18,7 @@
   "homepage": "https://github.com/yjh051108/dsh-router-standard",
   "type": "module",
   "files": [
+    "cordis.patch.yml",
     "preset/",
     "docs/",
     "README.md",
@@ -31,5 +32,12 @@
     "test": "node --test router.test.mjs router.integration.test.mjs",
     "probe": "node probe/matrix.mjs"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
 }
